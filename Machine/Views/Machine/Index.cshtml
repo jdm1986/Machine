@@ -1,0 +1,25 @@
+﻿@model Machine.Models.MachineListViewModel
+@{
+    ViewBag.Title = "Machines";
+}
+
+<h2>Machines</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Machine</th>
+            <th>Hours</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (var i = 0; i < Model.Machines.Count; i++)
+        {
+            <tr>
+                <td>@Model.Machines[i].MachineMakeModel</td>
+                <td>@Model.Machines[i].MachineHours</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

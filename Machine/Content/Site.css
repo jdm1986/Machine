@@ -22,3 +22,19 @@ select,
 textarea {
     max-width: 280px;
 }
+
+#navbarmain {
+    background-color: #C01124;
+}
+
+#navbarli {
+    color: #f8f8f8;
+    font-family: 'Saira Condensed', sans-serif;
+}
+
+footer {
+    background-color: #C01124;
+    color: #f8f8f8;
+    text-align: center;
+    font-family: 'Saira Condensed', sans-serif;
+}
