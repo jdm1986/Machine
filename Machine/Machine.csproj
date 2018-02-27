@@ -163,6 +163,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Mach.cs" />
     <Compile Include="Models\MachineListViewModel.cs" />
+    <Compile Include="Models\MachineType.cs" />
     <Compile Include="Models\MachineViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

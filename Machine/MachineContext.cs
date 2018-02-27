@@ -10,9 +10,10 @@ namespace Machine
 
         public MachineContext()
             : base("name=Machine") { }
-
+        
+        public virtual DbSet<MachineType> MachineTypes { get; set; }
         public virtual DbSet<Mach> Machines { get; set; }
-       
-       
+
+
     }
 }
