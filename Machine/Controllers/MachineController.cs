@@ -53,5 +53,67 @@ namespace Machine.Controllers
 
             return new HttpNotFoundResult();
         }
+
+        public ActionResult MachineAdd()
+        {
+            var machineViewModel = new MachineViewModel();
+
+            return View("AddEditMachine", machineViewModel);
+        }
+
+        [HttpPost]
+        public ActionResult AddMachine(MachineViewModel machineViewModel)
+        {
+            var nextMachineId = Machines.Max(m => m.MachineId) + 1;
+
+            var machine = new Mach
+            {
+                MachineId = nextMachineId,
+                MachineMake = machineViewModel.MachineMake,
+                MachineModel = machineViewModel.MachineModel,
+                Hours = machineViewModel.Hours.Value
+            };
+
+            Machines.Add(machine);
+
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult MachineEdit(int id)
+        {
+            var machine = Machines.SingleOrDefault(m => m.MachineId == id);
+            if (machine != null)
+            {
+                var machineViewModel = new MachineViewModel
+                {
+                    MachineId = machine.MachineId,
+                    MachineMake = machine.MachineMake,
+                    MachineModel = machine.MachineModel,
+                    Hours = machine.Hours
+
+                };
+
+                return View("AddEditMachine", machineViewModel);
+            }
+
+            return new HttpNotFoundResult();
+        }
+
+        [HttpPost]
+        public ActionResult EditMachine(MachineViewModel machineViewModel)
+        {
+            var machine = Machines.SingleOrDefault(m => m.MachineId == machineViewModel.MachineId);
+
+            if (machine != null)
+            {
+                machine.MachineMake = machineViewModel.MachineMake;
+                machine.MachineModel = machineViewModel.MachineModel;
+                machine.Hours = machineViewModel.Hours.Value;
+
+                return RedirectToAction("Index");
+            }
+
+            return new HttpNotFoundResult();
+        }
     }
 }

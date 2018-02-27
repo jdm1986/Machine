@@ -15,11 +15,16 @@
     <tbody>
         @for (var i = 0; i < Model.Machines.Count; i++)
         {
-            <tr>
-                <td>@Model.Machines[i].MachineMakeModel</td>
-                <td>@Html.ActionLink("Detail", "MachineDetail", new { id = Model.Machines[i].MachineId })</td>
-            </tr>
+        <tr>
+            <td>@Model.Machines[i].MachineMakeModel</td>
+            <td>@Html.ActionLink("Detail", "MachineDetail", new { id = Model.Machines[i].MachineId })</td>
+            <td>@Html.ActionLink("Edit", "MachineEdit", new { id = Model.Machines[i].MachineId })</td>
+        </tr>
         }
     </tbody>
 </table>
+<div class="col-sm-4">
+    @Html.ActionLink("Add Machine", "MachineAdd", null, new { @class = "btn btn-primary" })
+</div>
+
 
