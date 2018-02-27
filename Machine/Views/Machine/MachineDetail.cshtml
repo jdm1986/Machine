@@ -12,6 +12,7 @@
             <th>@Html.LabelFor(m => m.MachineModel)</th>
             <th>@Html.LabelFor(m => m.Hours)</th>
         </tr>
+    </thead>
         <tbody>
             <tr>
                 <td>@Html.DisplayFor(m => m.MachineMake)</td>
@@ -19,7 +20,7 @@
                 <td>@Html.DisplayFor(m => m.Hours)</td>
             </tr>
         </tbody>
-    </thead>
+    
 </table>
 <div class="col-sm-12">
     @Html.ActionLink("Return to Machine List", "Index", new { @class = "btn btn-primary"})
