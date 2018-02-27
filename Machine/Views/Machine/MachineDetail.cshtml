@@ -1,0 +1,25 @@
+﻿@model Machine.Models.MachineViewModel
+@{
+    ViewBag.Title = "Machine Detail";
+}
+ 
+<h2>@Model.MachineMakeModel</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>@Html.LabelFor(m => m.MachineMake)</th>
+            <th>@Html.LabelFor(m => m.MachineModel)</th>
+            <th>@Html.LabelFor(m => m.Hours)</th>
+        </tr>
+        <tbody>
+            <tr>
+                <td>@Html.DisplayFor(m => m.MachineMake)</td>
+                <td>@Html.DisplayFor(m => m.MachineModel)</td>
+                <td>@Html.DisplayFor(m => m.Hours)</td>
+            </tr>
+        </tbody>
+    </thead>
+</table>
+
+@Html.ActionLink("Return to Machine List", "Index", new { @class = "btn btn-xs"})

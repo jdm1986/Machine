@@ -9,24 +9,49 @@ namespace Machine.Controllers
 {
     public class MachineController : Controller
     {
+        public static List<Mach> Machines = new List<Mach>
+        {
+            new Mach { MachineId = 1, MachineMake = "CAT", MachineModel = "D3", Hours = 500 },
+            new Mach { MachineId = 2, MachineMake = "CAT", MachineModel = "D4", Hours = 1500 },
+            new Mach { MachineId = 3, MachineMake = "CAT", MachineModel = "D5", Hours = 2500 },
+            new Mach { MachineId = 4, MachineMake = "CAT", MachineModel = "D6", Hours = 3500 },
+            new Mach { MachineId = 5, MachineMake = "CAT", MachineModel = "D8", Hours = 4500 },
+            new Mach { MachineId = 6, MachineMake = "CAT", MachineModel = "D9", Hours = 6500 }
+        };
 
         public ActionResult Index()
         {
 
             var machineList = new MachineListViewModel
             {
-                Machines = new List<MachineViewModel>
+                Machines = Machines.Select(m => new MachineViewModel 
                 {
-                    new MachineViewModel { MachineId = 1, MachineMake = "CAT", MachineModel = "D3", MachineHours = 500 },
-                    new MachineViewModel { MachineId = 2, MachineMake = "CAT", MachineModel = "D4", MachineHours = 1500 },
-                    new MachineViewModel { MachineId = 3, MachineMake = "CAT", MachineModel = "D5", MachineHours = 2500 },
-                    new MachineViewModel { MachineId = 4, MachineMake = "CAT", MachineModel = "D6", MachineHours = 3500 },
-                    new MachineViewModel { MachineId = 5, MachineMake = "CAT", MachineModel = "D8", MachineHours = 4500 },
-                    new MachineViewModel { MachineId = 6, MachineMake = "CAT", MachineModel = "D9", MachineHours = 6500 }
-                }
+                    MachineId = m.MachineId,
+                    MachineMake = m.MachineMake,
+                    MachineModel = m.MachineModel,
+                    Hours = m.Hours
+                }).ToList()
             };
 
             return View(machineList);
+        }
+
+        public ActionResult MachineDetail(int id)
+        {
+            var machine = Machines.SingleOrDefault(m => m.MachineId == id);
+            if (machine != null)
+            {
+                var machineViewModel = new MachineViewModel
+                {
+                    MachineId = machine.MachineId,
+                    MachineMake = machine.MachineMake,
+                    MachineModel = machine.MachineModel,
+                    Hours = machine.Hours
+                };
+                return View(machineViewModel);
+            }
+
+            return new HttpNotFoundResult();
         }
     }
 }

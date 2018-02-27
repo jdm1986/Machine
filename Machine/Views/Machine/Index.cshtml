@@ -17,7 +17,7 @@
         {
             <tr>
                 <td>@Model.Machines[i].MachineMakeModel</td>
-                <td>@Model.Machines[i].MachineHours</td>
+                <td>@Html.ActionLink("Detail", "MachineDetail", new { id = Model.Machines[i].MachineId })</td>
             </tr>
         }
     </tbody>
