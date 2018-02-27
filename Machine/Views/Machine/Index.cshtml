@@ -19,6 +19,30 @@
             <td>@Model.Machines[i].MachineMakeModel</td>
             <td>@Html.ActionLink("Detail", "MachineDetail", new { id = Model.Machines[i].MachineId })</td>
             <td>@Html.ActionLink("Edit", "MachineEdit", new { id = Model.Machines[i].MachineId })</td>
+            <td>
+                <a data-toggle="modal" href="@("#deleteMachineModal" + i)">Delete</a>
+                <div class="modal fade" id="@("deleteMachineModal" + i)" tabindex="-1" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            @using (Html.BeginForm("DeleteMachine", "Machine"))
+                            {
+                        <input type="hidden" value="@Model.Machines[i].MachineId" name="PersonId" />
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Delete @Model.Machines[i].MachineMakeModel</h4>
+                        </div>
+                        <div class="modal-body">
+                            Are you sure you want to delete @Model.Machines[i].MachineMakeModel?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Yes</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+             </td>
         </tr>
         }
     </tbody>

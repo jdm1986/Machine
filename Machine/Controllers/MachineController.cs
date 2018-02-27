@@ -115,5 +115,21 @@ namespace Machine.Controllers
 
             return new HttpNotFoundResult();
         }
+
+        [HttpPost]
+        public ActionResult DeleteMachine(MachineViewModel machineViewModel)
+        {
+            var machine = Machines.SingleOrDefault(m => m.MachineId == machineViewModel.MachineId);
+
+            if (machine != null)
+            {
+                Machines.Remove(machine);
+
+                return RedirectToAction("Index");
+
+            }
+
+            return new HttpNotFoundResult();
+        }
     }
 }
