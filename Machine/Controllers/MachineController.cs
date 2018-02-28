@@ -93,6 +93,7 @@ namespace Machine.Controllers
                 {
                     var machineViewModel = new MachineViewModel
                     {
+                        MachineId = machine.MachineId,
                         MachineNum = machine.MachineNum,
                         MachineMake = machine.MachineMake,
                         MachineModel = machine.MachineModel,

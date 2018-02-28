@@ -1,7 +1,7 @@
 ﻿@model Machine.Models.MachineViewModel
 @{
-    var isEditMode = Model.MachineId != null;
-    ViewBag.Title = isEditMode ? "Edit " + Model.MachineMakeModel : "Add Machine" ;
+    bool isEditMode = Model.MachineId != null;
+    ViewBag.Title = (isEditMode)? "Edit " + Model.MachineMakeModel : "Add Machine" ;
 }
 
 <h2>@Model.MachineMakeModel</h2>
@@ -11,9 +11,9 @@
 
 <div class="row">
     <div class="col-sm-3 col-xs-5">
-        @using (Html.BeginForm(isEditMode ? "EditMachine" : "AddMachine", "Machine"))
-    {
-        @Html.HiddenFor(m => m.MachineId)
+        @using (Html.BeginForm((isEditMode)? "EditMachine" : "AddMachine", "Machine"))
+        {
+            @Html.HiddenFor(m => m.MachineId)
         <div class="form-group">
             @Html.LabelFor(m => m.MachineNum)
             @Html.TextBoxFor(m => m.MachineNum, new { @class = "form-control" })
@@ -37,8 +37,8 @@
             </div>
         </div>
 
-        <button type="submit" class="btn btn-primary">@(isEditMode ? "Save" : "Add")</button>
+        <button type="submit" class="btn btn-primary">@((isEditMode)? "Save" : "Add")</button>
         @Html.ActionLink("Cancel", "Index", null, new { @class = "btn btn-default" })
-}
+        }
     </div>
 </div>

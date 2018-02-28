@@ -1,7 +1,6 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-image: url("~/Content/Logo.png");
 }
 
 
@@ -16,8 +15,9 @@
 }
 
 .highlight-row {
-    background-color: black;
+    background-color: whitesmoke;
 }
+
 input,
 select,
 textarea {
