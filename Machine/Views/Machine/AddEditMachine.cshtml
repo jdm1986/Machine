@@ -10,7 +10,11 @@
     <div class="col-sm-3 col-xs-5">
         @using (Html.BeginForm(isEditMode ? "EditMachine" : "AddMachine", "Machine"))
     {
-            @Html.HiddenFor(m => m.MachineId)
+        @Html.HiddenFor(m => m.MachineId)
+        <div class="form-group">
+            @Html.LabelFor(m => m.MachineNum)
+            @Html.TextBoxFor(m => m.MachineNum, new { @class = "form-control" })
+        </div>
         <div class="form-group">
             @Html.LabelFor(m => m.MachineMake)
             @Html.TextBoxFor(m => m.MachineMake, new { @class = "form-control" })

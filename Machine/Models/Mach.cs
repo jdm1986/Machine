@@ -12,6 +12,7 @@ namespace Machine.Models
     {
         [Key]
         public int MachineId { get; set; }
+        public int MachineNum { get; set; }
         public string MachineMake { get; set; }
         public string MachineModel { get; set; }
         public int Hours { get; set; }

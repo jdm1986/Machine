@@ -5,11 +5,15 @@
 
 <h2>Machines</h2>
 
-<table class="table table-striped">
+<table class="table table-bordered table-condensed table-striped">
     <thead>
         <tr>
             <th>Machine</th>
+            <th>Fleet Number</th>
             <th>Hours</th>
+            <th>More Info</th>
+            <th></th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -17,6 +21,8 @@
         {
         <tr>
             <td>@Model.Machines[i].MachineMakeModel</td>
+            <td>@Model.Machines[i].MachineNum</td>
+            <td>@Model.Machines[i].Hours</td>
             <td>@Html.ActionLink("Detail", "MachineDetail", new { id = Model.Machines[i].MachineId })</td>
             <td>@Html.ActionLink("Edit", "MachineEdit", new { id = Model.Machines[i].MachineId })</td>
             <td>

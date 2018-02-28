@@ -19,6 +19,7 @@ namespace Machine.Controllers
                     Machines = machineContext.Machines.Select(m => new MachineViewModel
                     {
                         MachineId = m.MachineId,
+                        MachineNum = m.MachineNum,
                         MachineMake = m.MachineMake,
                         MachineModel = m.MachineModel,
                         Hours = m.Hours
@@ -41,6 +42,7 @@ namespace Machine.Controllers
                     var machineViewModel = new MachineViewModel
                     {
                         MachineId = machine.MachineId,
+                        MachineNum = machine.MachineNum,
                         MachineMake = machine.MachineMake,
                         MachineModel = machine.MachineModel,
                         Hours = machine.Hours
@@ -66,6 +68,7 @@ namespace Machine.Controllers
             {
                 var machine = new Mach
                 {
+                    MachineNum = machineViewModel.MachineNum.Value,
                     MachineMake = machineViewModel.MachineMake,
                     MachineModel = machineViewModel.MachineModel,
                     Hours = machineViewModel.Hours.Value
@@ -87,6 +90,7 @@ namespace Machine.Controllers
                 {
                     var machineViewModel = new MachineViewModel
                     {
+                        MachineNum = machine.MachineNum,
                         MachineMake = machine.MachineMake,
                         MachineModel = machine.MachineModel,
                         Hours = machine.Hours
@@ -110,6 +114,7 @@ namespace Machine.Controllers
 
                 if (machine != null)
                 {
+                    machine.MachineNum = machineViewModel.MachineNum.Value;
                     machine.MachineMake = machineViewModel.MachineMake;
                     machine.MachineModel = machineViewModel.MachineModel;
                     machine.Hours = machineViewModel.Hours.Value;

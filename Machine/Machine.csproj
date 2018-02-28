@@ -160,6 +160,14 @@
     <Compile Include="Migrations\201802271823211_InitialMigration.Designer.cs">
       <DependentUpon>201802271823211_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802281440027_DisabledOneToMany.cs" />
+    <Compile Include="Migrations\201802281440027_DisabledOneToMany.Designer.cs">
+      <DependentUpon>201802281440027_DisabledOneToMany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802281550587_MachineNum.cs" />
+    <Compile Include="Migrations\201802281550587_MachineNum.Designer.cs">
+      <DependentUpon>201802281550587_MachineNum.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Mach.cs" />
     <Compile Include="Models\MachineListViewModel.cs" />
@@ -227,6 +235,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201802271823211_InitialMigration.resx">
       <DependentUpon>201802271823211_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802281440027_DisabledOneToMany.resx">
+      <DependentUpon>201802281440027_DisabledOneToMany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802281550587_MachineNum.resx">
+      <DependentUpon>201802281550587_MachineNum.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

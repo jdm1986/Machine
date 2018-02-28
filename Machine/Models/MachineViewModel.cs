@@ -9,6 +9,10 @@ namespace Machine.Models
     public class MachineViewModel
     {
         public int? MachineId { get; set; }
+
+        [DisplayName("Fleet Number")]
+        public int? MachineNum { get; set; }
+
         [DisplayName("Make")]
         public string MachineMake { get; set; }
 
