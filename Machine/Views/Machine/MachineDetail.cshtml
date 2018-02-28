@@ -5,6 +5,8 @@
  
 <h2>@Model.MachineMakeModel</h2>
 
+
+@*Machine detail view*@
 <table class="table table-striped">
     <thead>
         <tr>
@@ -12,6 +14,7 @@
             <th>@Html.LabelFor(m => m.MachineModel)</th>
             <th>@Html.LabelFor(m => m.MachineNum)</th>
             <th>@Html.LabelFor(m => m.Hours)</th>
+   
         </tr>
     </thead>
         <tbody>
@@ -20,6 +23,7 @@
                 <td>@Html.DisplayFor(m => m.MachineModel)</td>
                 <td>@Html.DisplayFor(m => m.MachineNum)</td>
                 <td>@Html.DisplayFor(m => m.Hours)</td>
+   
             </tr>
         </tbody>
     

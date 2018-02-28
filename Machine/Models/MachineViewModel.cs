@@ -22,7 +22,12 @@ namespace Machine.Models
         [DisplayName("Hours")]
         public int? Hours { get; set; }
 
+        [DisplayName("Availabile")]
+        public bool Status { get; set; }
+
         [DisplayName("Machine")]
         public string MachineMakeModel => MachineMake + " " + MachineModel;
+
+        
     }
 }

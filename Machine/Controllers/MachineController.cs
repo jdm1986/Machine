@@ -22,7 +22,8 @@ namespace Machine.Controllers
                         MachineNum = m.MachineNum,
                         MachineMake = m.MachineMake,
                         MachineModel = m.MachineModel,
-                        Hours = m.Hours
+                        Hours = m.Hours,
+                        Status = m.Status
                     }).ToList()
                 };
 
@@ -45,7 +46,8 @@ namespace Machine.Controllers
                         MachineNum = machine.MachineNum,
                         MachineMake = machine.MachineMake,
                         MachineModel = machine.MachineModel,
-                        Hours = machine.Hours
+                        Hours = machine.Hours,
+                        Status = machine.Status
                     };
                     return View(machineViewModel);
                 }
@@ -71,7 +73,8 @@ namespace Machine.Controllers
                     MachineNum = machineViewModel.MachineNum.Value,
                     MachineMake = machineViewModel.MachineMake,
                     MachineModel = machineViewModel.MachineModel,
-                    Hours = machineViewModel.Hours.Value
+                    Hours = machineViewModel.Hours.Value,
+                    Status = machineViewModel.Status
                 };
 
                 machineContext.Machines.Add(machine);
@@ -93,7 +96,8 @@ namespace Machine.Controllers
                         MachineNum = machine.MachineNum,
                         MachineMake = machine.MachineMake,
                         MachineModel = machine.MachineModel,
-                        Hours = machine.Hours
+                        Hours = machine.Hours,
+                        Status = machine.Status
 
                     };
 
@@ -118,7 +122,9 @@ namespace Machine.Controllers
                     machine.MachineMake = machineViewModel.MachineMake;
                     machine.MachineModel = machineViewModel.MachineModel;
                     machine.Hours = machineViewModel.Hours.Value;
+                    machine.Status = machineViewModel.Status;
                     machineContext.SaveChanges();
+
 
                     return RedirectToAction("Index");
                 }

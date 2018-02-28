@@ -6,6 +6,9 @@
 
 <h2>@Model.MachineMakeModel</h2>
 
+
+@*//would like to sort on availability, also possibly change color of row based on availability*@
+
 <div class="row">
     <div class="col-sm-3 col-xs-5">
         @using (Html.BeginForm(isEditMode ? "EditMachine" : "AddMachine", "Machine"))
@@ -27,6 +30,13 @@
             @Html.LabelFor(m => m.Hours)
             @Html.TextBoxFor(m => m.Hours, new { @class = "form-control" })
         </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Status)
+            <div class="rentcheck">
+                @Html.CheckBoxFor(m => m.Status, new { @class = "form-control" })
+            </div>
+        </div>
+
         <button type="submit" class="btn btn-primary">@(isEditMode ? "Save" : "Add")</button>
         @Html.ActionLink("Cancel", "Index", null, new { @class = "btn btn-default" })
 }

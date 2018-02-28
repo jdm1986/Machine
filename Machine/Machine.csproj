@@ -168,6 +168,10 @@
     <Compile Include="Migrations\201802281550587_MachineNum.Designer.cs">
       <DependentUpon>201802281550587_MachineNum.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802281726290_MachineStatus.cs" />
+    <Compile Include="Migrations\201802281726290_MachineStatus.Designer.cs">
+      <DependentUpon>201802281726290_MachineStatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Mach.cs" />
     <Compile Include="Models\MachineListViewModel.cs" />
@@ -241,6 +245,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802281550587_MachineNum.resx">
       <DependentUpon>201802281550587_MachineNum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802281726290_MachineStatus.resx">
+      <DependentUpon>201802281726290_MachineStatus.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
