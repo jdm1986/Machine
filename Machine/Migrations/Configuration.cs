@@ -15,17 +15,17 @@ namespace Machine.Migrations
 
         protected override void Seed(Machine.MachineContext context)
         {
-            //context.MachineTypes.AddOrUpdate(
-            //    t => t.TypeId,
-            //    new MachineType { TypeId = 1, TypeName = "Dozer" },
-            //    new MachineType { TypeId = 2, TypeName = "Excavator" }
-            //    );
+            context.MachineTypes.AddOrUpdate(
+                t => t.TypeId,
+                new MachineType { TypeId = 1, TypeName = "Dozer" },
+                new MachineType { TypeId = 2, TypeName = "Excavator" }
+                );
 
             context.SaveChanges();
 
             context.Machines.AddOrUpdate(
                 m => m.MachineId,
-                new Mach { MachineId = 1, MachineNum = 345, MachineMake = "CAT", MachineModel = "D3", Hours = 500, Status = false},
+                new Mach { MachineId = 1, MachineNum = 345, MachineMake = "CAT", MachineModel = "D3", Hours = 500, Status = false, TypeId = 2},
                 new Mach { MachineId = 2, MachineNum = 346, MachineMake = "CAT", MachineModel = "D4", Hours = 1500, Status = false},
                 new Mach { MachineId = 3, MachineNum = 347, MachineMake = "CAT", MachineModel = "D5", Hours = 2500, Status = false},
                 new Mach { MachineId = 4, MachineNum = 454, MachineMake = "CAT", MachineModel = "D6", Hours = 3500, Status = false},

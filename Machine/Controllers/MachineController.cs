@@ -23,6 +23,7 @@ namespace Machine.Controllers
                         MachineMake = m.MachineMake,
                         MachineModel = m.MachineModel,
                         Hours = m.Hours,
+                        Notes = m.Notes,
                         Status = m.Status
                     }).ToList()
                 };
@@ -47,6 +48,7 @@ namespace Machine.Controllers
                         MachineMake = machine.MachineMake,
                         MachineModel = machine.MachineModel,
                         Hours = machine.Hours,
+                        Notes = machine.Notes,
                         Status = machine.Status
                     };
                     return View(machineViewModel);
@@ -74,6 +76,7 @@ namespace Machine.Controllers
                     MachineMake = machineViewModel.MachineMake,
                     MachineModel = machineViewModel.MachineModel,
                     Hours = machineViewModel.Hours.Value,
+                    Notes = machineViewModel.Notes,
                     Status = machineViewModel.Status
                 };
 
@@ -98,6 +101,7 @@ namespace Machine.Controllers
                         MachineMake = machine.MachineMake,
                         MachineModel = machine.MachineModel,
                         Hours = machine.Hours,
+                        Notes = machine.Notes,
                         Status = machine.Status
 
                     };
@@ -123,6 +127,7 @@ namespace Machine.Controllers
                     machine.MachineMake = machineViewModel.MachineMake;
                     machine.MachineModel = machineViewModel.MachineModel;
                     machine.Hours = machineViewModel.Hours.Value;
+                    machine.Notes = machineViewModel.Notes;
                     machine.Status = machineViewModel.Status;
                     machineContext.SaveChanges();
 
@@ -145,6 +150,8 @@ namespace Machine.Controllers
                 if (machine != null)
                 {
                     machineContext.Machines.Remove(machine);
+
+                    machineContext.SaveChanges();
 
                     return RedirectToAction("Index");
 

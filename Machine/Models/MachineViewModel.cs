@@ -22,6 +22,9 @@ namespace Machine.Models
         [DisplayName("Hours")]
         public int? Hours { get; set; }
 
+        [DisplayName("Notes")]
+        public string Notes { get; set; }
+
         [DisplayName("Available")]
         public bool Status { get; set; }
 

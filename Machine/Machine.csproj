@@ -172,6 +172,10 @@
     <Compile Include="Migrations\201802281726290_MachineStatus.Designer.cs">
       <DependentUpon>201802281726290_MachineStatus.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803010040559_Notes .cs" />
+    <Compile Include="Migrations\201803010040559_Notes .Designer.cs">
+      <DependentUpon>201803010040559_Notes .cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Mach.cs" />
     <Compile Include="Models\MachineListViewModel.cs" />
@@ -248,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802281726290_MachineStatus.resx">
       <DependentUpon>201802281726290_MachineStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803010040559_Notes .resx">
+      <DependentUpon>201803010040559_Notes .cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
