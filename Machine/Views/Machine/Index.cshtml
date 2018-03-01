@@ -10,6 +10,7 @@
         <tr>
             <th>Machine</th>
             <th>Fleet Number</th>
+            <th>Type</th>
             <th>Hours</th>
             <th>Notes</th>
             <th>Available</th>
@@ -25,6 +26,10 @@
             <tr class = "@((Model.Machines[i].Status) ? "" : "highlight-row")">
                 <td>@Model.Machines[i].MachineMakeModel</td>
                 <td>@Model.Machines[i].MachineNum</td>
+                <td>
+                    @*need to update this to allow for more than two options*@
+                    @((Model.Machines[i].TypeId == 1)? "Dozer" : "Excavator")
+                </td>
                 <td>@Model.Machines[i].Hours</td>
                 <td>@Model.Machines[i].Notes</td>
 

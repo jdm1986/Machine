@@ -22,6 +22,7 @@ namespace Machine.Controllers
                         MachineNum = m.MachineNum,
                         MachineMake = m.MachineMake,
                         MachineModel = m.MachineModel,
+                        TypeId = m.TypeId,
                         Hours = m.Hours,
                         Notes = m.Notes,
                         Status = m.Status
@@ -47,6 +48,7 @@ namespace Machine.Controllers
                         MachineNum = machine.MachineNum,
                         MachineMake = machine.MachineMake,
                         MachineModel = machine.MachineModel,
+                        TypeId = machine.TypeId,
                         Hours = machine.Hours,
                         Notes = machine.Notes,
                         Status = machine.Status
@@ -75,6 +77,7 @@ namespace Machine.Controllers
                     MachineNum = machineViewModel.MachineNum.Value,
                     MachineMake = machineViewModel.MachineMake,
                     MachineModel = machineViewModel.MachineModel,
+                    TypeId = machineViewModel.TypeId,
                     Hours = machineViewModel.Hours.Value,
                     Notes = machineViewModel.Notes,
                     Status = machineViewModel.Status
@@ -100,6 +103,7 @@ namespace Machine.Controllers
                         MachineNum = machine.MachineNum,
                         MachineMake = machine.MachineMake,
                         MachineModel = machine.MachineModel,
+                        TypeId = machine.TypeId,
                         Hours = machine.Hours,
                         Notes = machine.Notes,
                         Status = machine.Status
@@ -126,6 +130,7 @@ namespace Machine.Controllers
                     machine.MachineNum = machineViewModel.MachineNum.Value;
                     machine.MachineMake = machineViewModel.MachineMake;
                     machine.MachineModel = machineViewModel.MachineModel;
+                    machine.TypeId = machineViewModel.TypeId;
                     machine.Hours = machineViewModel.Hours.Value;
                     machine.Notes = machineViewModel.Notes;
                     machine.Status = machineViewModel.Status;

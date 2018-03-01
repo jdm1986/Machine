@@ -13,6 +13,7 @@
             <th>@Html.LabelFor(m => m.MachineMake)</th>
             <th>@Html.LabelFor(m => m.MachineModel)</th>
             <th>@Html.LabelFor(m => m.MachineNum)</th>
+            <th>@Html.LabelFor(m => m.TypeId)</th>
             <th>@Html.LabelFor(m => m.Hours)</th>
    
         </tr>
@@ -22,6 +23,8 @@
                 <td>@Html.DisplayFor(m => m.MachineMake)</td>
                 <td>@Html.DisplayFor(m => m.MachineModel)</td>
                 <td>@Html.DisplayFor(m => m.MachineNum)</td>
+                @*need to change this from id to TypeName*@
+                <td>@Html.DisplayFor(m => m.TypeId)</td>
                 <td>@Html.DisplayFor(m => m.Hours)</td>
    
             </tr>

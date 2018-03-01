@@ -176,6 +176,14 @@
     <Compile Include="Migrations\201803010040559_Notes .Designer.cs">
       <DependentUpon>201803010040559_Notes .cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803012305492_TypeId.cs" />
+    <Compile Include="Migrations\201803012305492_TypeId.Designer.cs">
+      <DependentUpon>201803012305492_TypeId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803012333278_TypeId correction.cs" />
+    <Compile Include="Migrations\201803012333278_TypeId correction.Designer.cs">
+      <DependentUpon>201803012333278_TypeId correction.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Mach.cs" />
     <Compile Include="Models\MachineListViewModel.cs" />
@@ -255,6 +263,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803010040559_Notes .resx">
       <DependentUpon>201803010040559_Notes .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803012305492_TypeId.resx">
+      <DependentUpon>201803012305492_TypeId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803012333278_TypeId correction.resx">
+      <DependentUpon>201803012333278_TypeId correction.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
