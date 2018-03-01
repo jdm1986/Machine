@@ -21,6 +21,9 @@ namespace Machine.Models
 
         [DisplayName("Hours")]
         public int? Hours { get; set; }
+        
+        [DisplayName("Type")]
+        public int? TypeId { get; set; }
 
         [DisplayName("Notes")]
         public string Notes { get; set; }
