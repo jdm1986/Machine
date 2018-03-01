@@ -18,6 +18,10 @@
     background-color: whitesmoke;
 }
 
+.tdlist {
+    color: black;
+}
+
 input,
 select,
 textarea {
