@@ -26,22 +26,7 @@
             <tr class = "@((Model.Machines[i].Status) ? "" : "highlight-row")">
                 <td>@Model.Machines[i].MachineMakeModel</td>
                 <td>@Model.Machines[i].MachineNum</td>
-              
-                    @*NEED TO FIX THIS SWITCH STATEMENT*@
-                    @{switch (Model.Machines[i].TypeId) 
-                        {
-                            case 0:
-                            <td>Excavator</td>;
-                                break;
-                            case 1:
-                                <td>Dozer</td>;
-                                break;
-                            case 2:
-                                <td>Tractor</td>;
-                                break;
-                        }
-                    }
-                
+                <td>@Model.Machines[i].TypeName</td>
                 <td>@Model.Machines[i].Hours</td>
                 <td>@Model.Machines[i].Notes</td>
 

@@ -184,6 +184,14 @@
     <Compile Include="Migrations\201803012333278_TypeId correction.Designer.cs">
       <DependentUpon>201803012333278_TypeId correction.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803072336472_Photo migration.cs" />
+    <Compile Include="Migrations\201803072336472_Photo migration.Designer.cs">
+      <DependentUpon>201803072336472_Photo migration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803072345095_photourl.cs" />
+    <Compile Include="Migrations\201803072345095_photourl.Designer.cs">
+      <DependentUpon>201803072345095_photourl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Mach.cs" />
     <Compile Include="Models\MachineListViewModel.cs" />
@@ -269,6 +277,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803012333278_TypeId correction.resx">
       <DependentUpon>201803012333278_TypeId correction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803072336472_Photo migration.resx">
+      <DependentUpon>201803072336472_Photo migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803072345095_photourl.resx">
+      <DependentUpon>201803072345095_photourl.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

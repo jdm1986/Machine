@@ -7,7 +7,6 @@
 <h2>@Model.MachineMakeModel</h2>
 
 
-@*//would like to sort on availability, also possibly change color of row based on availability*@
 
 <div class="row">
     <div class="col-sm-3 col-xs-5">
@@ -28,18 +27,7 @@
         </div>
         <div class="form-group">
             @Html.LabelFor(m => m.TypeId)
-            @Html.DropDownListFor(m => m.TypeId,
-           new SelectList(
-               new List<Object> {
-               new { value = 0 , text = "Excavator"},
-               new { value = 1 , text = "Dozer"},
-               new { value = 2 , text = "Tractor"}
-               },
-               "value",
-               "text",
-               Model.TypeId
-               )
-               )
+            @Html.DropDownListFor(m => m.TypeId, (SelectList)ViewBag.MachineTypes)
         </div>
         <div class="form-group">
             @Html.LabelFor(m => m.Hours)

@@ -9,6 +9,17 @@ namespace Machine.Controllers
 {
     public class MachineController : Controller
     {
+        public void SetupViewBag()
+        {
+            using (var machineContext = new MachineContext())
+            {
+                ViewBag.MachineTypes = new SelectList(
+                    machineContext.MachineTypes.ToList(),
+                    "TypeId",
+                    "TypeName"
+                );
+            }
+        }
         
         public ActionResult Index()
         {
@@ -22,6 +33,7 @@ namespace Machine.Controllers
                         MachineNum = m.MachineNum,
                         MachineMake = m.MachineMake,
                         MachineModel = m.MachineModel,
+                        TypeName = m.MachineType.TypeName,
                         TypeId = m.TypeId,
                         Hours = m.Hours,
                         Notes = m.Notes,
@@ -51,7 +63,8 @@ namespace Machine.Controllers
                         TypeId = machine.TypeId,
                         Hours = machine.Hours,
                         Notes = machine.Notes,
-                        Status = machine.Status
+                        Status = machine.Status,
+                        Photo = machine.Photo
                     };
                     return View(machineViewModel);
                 }
@@ -62,6 +75,8 @@ namespace Machine.Controllers
 
         public ActionResult MachineAdd()
         {
+            SetupViewBag();
+
             var machineViewModel = new MachineViewModel();
 
             return View("AddEditMachine", machineViewModel);
@@ -80,7 +95,8 @@ namespace Machine.Controllers
                     TypeId = machineViewModel.TypeId,
                     Hours = machineViewModel.Hours.Value,
                     Notes = machineViewModel.Notes,
-                    Status = machineViewModel.Status
+                    Status = machineViewModel.Status,
+                    Photo = machineViewModel.Photo
                 };
 
                 machineContext.Machines.Add(machine);
@@ -92,6 +108,7 @@ namespace Machine.Controllers
 
         public ActionResult MachineEdit(int id)
         {
+            SetupViewBag();
             using (var machineContext = new MachineContext())
             {
                 var machine = machineContext.Machines.SingleOrDefault(m => m.MachineId == id);

@@ -19,6 +19,7 @@ namespace Machine.Models
         public string Notes { get; set; }
         public bool Status { get; set; }
         public int? TypeId { get; set; }
+        public string Photo { get; set; }
 
 
         public virtual MachineType MachineType { get; set; }
