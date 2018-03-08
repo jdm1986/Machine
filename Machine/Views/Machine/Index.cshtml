@@ -14,7 +14,7 @@
             <th>Hours</th>
             <th>Notes</th>
             <th>Available</th>
-            <th>More Info</th>
+            <th>Photo</th>
             <th></th>
             <th></th>
         </tr>
@@ -35,7 +35,7 @@
                 <td>@((Model.Machines[i].Status) ? "Yes" : "No")
                 </td>
 
-                <td>@Html.ActionLink("Detail", "MachineDetail", new { id = Model.Machines[i].MachineId })</td>
+                <td>@Html.ActionLink("Photo", "MachineDetail", new { id = Model.Machines[i].MachineId })</td>
                 <td>@Html.ActionLink("Edit", "MachineEdit", new { id = Model.Machines[i].MachineId })</td>
                 <td>
                     <a data-toggle="modal" href="@("#deleteMachineModal" + i)">Delete</a>
