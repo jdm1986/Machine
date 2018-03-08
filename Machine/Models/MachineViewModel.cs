@@ -34,6 +34,7 @@ namespace Machine.Models
         [DisplayName("Machine")]
         public string MachineMakeModel => MachineMake + " " + MachineModel;
 
+        [DisplayName("Photo URL")]
         public string Photo { get; set; }
 
         [DisplayName("Type")]

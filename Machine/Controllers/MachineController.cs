@@ -37,7 +37,8 @@ namespace Machine.Controllers
                         TypeId = m.TypeId,
                         Hours = m.Hours,
                         Notes = m.Notes,
-                        Status = m.Status
+                        Status = m.Status,
+                        Photo = m.Photo
                     }).ToList()
                 };
 
@@ -123,7 +124,8 @@ namespace Machine.Controllers
                         TypeId = machine.TypeId,
                         Hours = machine.Hours,
                         Notes = machine.Notes,
-                        Status = machine.Status
+                        Status = machine.Status,
+                        Photo = machine.Photo
 
                     };
 
@@ -151,6 +153,7 @@ namespace Machine.Controllers
                     machine.Hours = machineViewModel.Hours.Value;
                     machine.Notes = machineViewModel.Notes;
                     machine.Status = machineViewModel.Status;
+                    machine.Photo = machineViewModel.Photo;
                     machineContext.SaveChanges();
 
 
