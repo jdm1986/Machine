@@ -3,10 +3,20 @@
     padding-bottom: 20px;
 }
 
-
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: auto;
+}
+
+
+
+.logo-index {
+    text-align: center;
+}
+
+#main-image {
+    width: 100%;
 }
 
 
