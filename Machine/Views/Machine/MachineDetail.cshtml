@@ -3,31 +3,19 @@
     ViewBag.Title = "Photo Page";
 }
  
-<h2>@Model.MachineMakeModel</h2>
+<h4>@Model.MachineMakeModel #@Model.MachineNum</h4>
 
-<img src="@Html.DisplayFor(m => m.Photo)" height="250" />
-
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th>@Html.LabelFor(m => m.MachineMake)</th>
-            <th>@Html.LabelFor(m => m.MachineModel)</th>
-            <th>@Html.LabelFor(m => m.MachineNum)</th>
-            <th>@Html.LabelFor(m => m.Hours)</th>
-   
-        </tr>
-    </thead>
-        <tbody>
-            <tr>
-                <td>@Html.DisplayFor(m => m.MachineMake)</td>
-                <td>@Html.DisplayFor(m => m.MachineModel)</td>
-                <td>@Html.DisplayFor(m => m.MachineNum)</td>
-                <td>@Html.DisplayFor(m => m.Hours)</td>
-   
-            </tr>
-        </tbody>
-    
-</table>
-<div class="col-sm-12">
-    @Html.ActionLink("Return to Machine List", "Index", new { @class = "btn btn-primary"})
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <img src="@Html.DisplayFor(m => m.Photo)" height="300" />
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="row">
+        <div class="col-md-12">
+            @Html.ActionLink("Return to Machine List", "Index", new { @class = "btn btn-primary" })
+        </div>
+    </div>
 </div>
