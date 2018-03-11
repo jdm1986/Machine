@@ -156,41 +156,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="MachineContext.cs" />
-    <Compile Include="Migrations\201802271823211_InitialMigration.cs" />
-    <Compile Include="Migrations\201802271823211_InitialMigration.Designer.cs">
-      <DependentUpon>201802271823211_InitialMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201802281440027_DisabledOneToMany.cs" />
-    <Compile Include="Migrations\201802281440027_DisabledOneToMany.Designer.cs">
-      <DependentUpon>201802281440027_DisabledOneToMany.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201802281550587_MachineNum.cs" />
-    <Compile Include="Migrations\201802281550587_MachineNum.Designer.cs">
-      <DependentUpon>201802281550587_MachineNum.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201802281726290_MachineStatus.cs" />
-    <Compile Include="Migrations\201802281726290_MachineStatus.Designer.cs">
-      <DependentUpon>201802281726290_MachineStatus.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803010040559_Notes .cs" />
-    <Compile Include="Migrations\201803010040559_Notes .Designer.cs">
-      <DependentUpon>201803010040559_Notes .cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803012305492_TypeId.cs" />
-    <Compile Include="Migrations\201803012305492_TypeId.Designer.cs">
-      <DependentUpon>201803012305492_TypeId.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803012333278_TypeId correction.cs" />
-    <Compile Include="Migrations\201803012333278_TypeId correction.Designer.cs">
-      <DependentUpon>201803012333278_TypeId correction.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803072336472_Photo migration.cs" />
-    <Compile Include="Migrations\201803072336472_Photo migration.Designer.cs">
-      <DependentUpon>201803072336472_Photo migration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803072345095_photourl.cs" />
-    <Compile Include="Migrations\201803072345095_photourl.Designer.cs">
-      <DependentUpon>201803072345095_photourl.cs</DependentUpon>
+    <Compile Include="Migrations\201803112217499_rebuild_initial.cs" />
+    <Compile Include="Migrations\201803112217499_rebuild_initial.Designer.cs">
+      <DependentUpon>201803112217499_rebuild_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Mach.cs" />
@@ -255,32 +223,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201802271823211_InitialMigration.resx">
-      <DependentUpon>201802271823211_InitialMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802281440027_DisabledOneToMany.resx">
-      <DependentUpon>201802281440027_DisabledOneToMany.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802281550587_MachineNum.resx">
-      <DependentUpon>201802281550587_MachineNum.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802281726290_MachineStatus.resx">
-      <DependentUpon>201802281726290_MachineStatus.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803010040559_Notes .resx">
-      <DependentUpon>201803010040559_Notes .cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803012305492_TypeId.resx">
-      <DependentUpon>201803012305492_TypeId.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803012333278_TypeId correction.resx">
-      <DependentUpon>201803012333278_TypeId correction.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803072336472_Photo migration.resx">
-      <DependentUpon>201803072336472_Photo migration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803072345095_photourl.resx">
-      <DependentUpon>201803072345095_photourl.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201803112217499_rebuild_initial.resx">
+      <DependentUpon>201803112217499_rebuild_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
